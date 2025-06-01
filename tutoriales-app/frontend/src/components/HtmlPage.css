@@ -1,0 +1,372 @@
+/* tutoriales-app/frontend/src/components/HomePage.css */
+
+/* Contenedor principal de la página */
+.home-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Sección Principal / Hero Section */
+.hero-section {
+  display: flex;
+  background-color: #fff;
+  border-radius: 12px; /* Ligeramente más redondeado */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  overflow: hidden;
+  margin-top: 40px; /* Mayor margen superior */
+  position: relative;
+  min-height: 450px; /* Un poco más alto */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+.hero-content {
+  flex: 1.2; /* Dale un poco más de espacio al contenido */
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.new-release-tag {
+  background-color: #ffcc00; /* Un amarillo más vibrante */
+  color: #333;
+  padding: 6px 12px; /* Más padding */
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 18px; /* Mayor margen */
+  text-transform: uppercase; /* Mayúsculas */
+}
+
+.hero-content h1 {
+  font-size: 2.8em; /* Tamaño de fuente más grande */
+  margin-bottom: 20px;
+  line-height: 1.15;
+  color: #2c3e50; /* Color más oscuro para el título */
+}
+
+.hero-content p {
+  font-size: 1.15em;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.course-details span {
+  margin-right: 25px; /* Más espacio */
+  font-size: 0.95em;
+  color: #666;
+  display: inline-flex; /* Para alinear íconos si los añades */
+  align-items: center;
+}
+.course-details span::before { /* Ejemplo para añadir iconos simples */
+    margin-right: 5px;
+}
+.course-details span:nth-child(1)::before { content: "⏱️"; }
+.course-details span:nth-child(2)::before { content: "✅"; }
+.course-details span:nth-child(3)::before { content: "🎓"; }
+
+
+.action-buttons {
+  margin-top: 30px;
+}
+
+.action-buttons .btn {
+  margin-right: 20px; /* Más espacio entre botones */
+  font-size: 1.05em; /* Botones ligeramente más grandes */
+}
+
+.note {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 20px;
+}
+
+.hero-image-container {
+  flex: 0.8; /* Menos espacio para la imagen, más para el texto */
+  position: relative;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 12px 12px 0; /* Coincide con el redondeado del padre */
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 12px 12px 0;
+}
+
+.instructor-info {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  background-color: rgba(255, 255, 255, 0.95); /* Fondo un poco más sólido */
+  padding: 12px 18px;
+  border-radius: 8px; /* Ligeramente más redondeado */
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.instructor-profile-pic {
+  width: 50px; /* Un poco más grande */
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+  border: 2px solid #007bff; /* Borde para destacar */
+}
+
+.instructor-info p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.05em;
+}
+
+/* Sección de "Nuestras Escuelas" / "Caminos de Aprendizaje" */
+.goals-section {
+  text-align: center;
+  padding: 80px 0; /* Más padding */
+  background-color: #eef2f8;
+  margin-top: 50px; /* Más espacio */
+  border-radius: 12px;
+}
+
+.goals-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.goals-section p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.schools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px mínimo, adaptable */
+    gap: 30px; /* Espacio entre tarjetas */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.school-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Alineación del texto dentro de la tarjeta */
+}
+
+.school-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.school-card h3 {
+    font-size: 1.6em;
+    color: #007bff; /* Color primario para el título */
+    margin-bottom: 10px;
+}
+
+.school-card p {
+    font-size: 0.95em;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.explore-link {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 3px;
+    transition: border-color 0.3s ease;
+}
+
+.explore-link:hover {
+    border-color: transparent;
+}
+
+
+/* Nueva Sección: ¿Por qué elegirnos? */
+.why-us-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f9fbfd; /* Un color de fondo suave */
+  margin-top: 50px;
+  border-radius: 12px;
+}
+
+.why-us-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.benefit-item .icon {
+  font-size: 3em; /* Iconos grandes */
+  margin-bottom: 15px;
+  display: block; /* Para que el margin-bottom funcione */
+}
+
+.benefit-item h3 {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.benefit-item p {
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Sección de Call to Action (CTA) - Cursos Gratis */
+.cta-free-courses {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #007bff; /* Color primario */
+  color: white;
+  margin-top: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Sombra azul */
+}
+
+.cta-free-courses h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.cta-free-courses p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cta-free-courses .btn.primary {
+  background-color: white;
+  color: #007bff;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  border-radius: 6px;
+}
+
+.cta-free-courses .btn.primary:hover {
+  background-color: #f0f0f0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .hero-content {
+    padding: 30px;
+    flex: none;
+    width: 100%;
+  }
+  .hero-image-container {
+    height: 350px;
+    flex: none;
+    width: 100%;
+    border-radius: 0 0 12px 12px; /* Redondeado en la parte inferior */
+  }
+  .hero-image {
+    border-radius: 0 0 12px 12px;
+  }
+  .instructor-info {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    right: auto; /* Anula el 'right' anterior */
+  }
+  .goals-section, .why-us-section, .cta-free-courses {
+    padding: 60px 15px;
+  }
+  .goals-section h2, .why-us-section h2, .cta-free-courses h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2em;
+  }
+  .hero-content p {
+    font-size: 1em;
+  }
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .action-buttons .btn {
+    width: 90%;
+    margin: 10px 0;
+  }
+  .instructor-info {
+    font-size: 0.9em;
+  }
+  .instructor-profile-pic {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .navbar-links {
+    display: none; /* O implementar un menú hamburguesa */
+  }
+  .navbar-actions .btn {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+  .hero-content p {
+    font-size: 0.9em;
+  }
+  .course-details span {
+    font-size: 0.8em;
+    margin-right: 15px;
+  }
+  .goals-section h2, .why-us-section h2, .cta-free-courses h2 {
+    font-size: 1.8em;
+  }
+  .school-card, .benefit-item {
+    padding: 20px;
+  }
+}

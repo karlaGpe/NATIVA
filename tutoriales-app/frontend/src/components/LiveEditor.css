@@ -1,0 +1,35 @@
+.editor-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.editor {
+  background-color: #2d2d2d !important;
+  color: #f8f8f2 !important;
+  font-family: 'Fira Code', monospace;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 150px;
+  overflow: auto;
+}
+
+.preview-wrapper {
+  padding: 1rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border-radius: 6px;
+  min-height: 100px;
+}
+
+.error {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}

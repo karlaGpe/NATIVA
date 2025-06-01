@@ -1,0 +1,20 @@
+.python-container {
+  background: linear-gradient(to right, #ffe0b2, #ffcc80);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.python-title {
+  font-size: 2rem;
+  color: #e65100;
+  margin-bottom: 1rem;
+}
+
+.python-tutorial {
+  background: #ffffff;
+  border-left: 5px solid #e65100;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}

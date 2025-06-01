@@ -1,0 +1,156 @@
+/* frontend/src/components/PageStyles.css */
+
+/* General Body and HTML styles */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Fuente base, puedes cambiarla si importas otras */
+  background-color: var(--darker-bg); /* Fondo muy oscuro de la Navbar */
+  color: var(--light-text); /* Texto claro para todo el contenido */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Main container for pages */
+.page-container {
+  padding: 2.5rem; /* Un poco más de padding */
+  max-width: 960px;
+  margin: 2.5rem auto; /* Más margen arriba/abajo */
+  background-color: var(--dark-bg); /* Fondo oscuro para el contenido */
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra más profunda */
+  border: 1px solid rgba(0, 255, 255, 0.2); /* Pequeño borde neón sutil */
+}
+
+.page-title {
+  color: var(--neon-blue); /* Título en azul neón */
+  font-size: 3rem; /* Más grande */
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-shadow: var(--glow-intensity) var(--neon-blue); /* Resplandor neón */
+}
+
+.page-intro {
+  font-size: 1.2rem; /* Más grande */
+  color: var(--light-text);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Sutil resplandor en el texto */
+}
+
+/* Section styles for content organization */
+.page-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--neon-pink); /* Línea divisoria rosa neón */
+}
+
+.section-title {
+  font-size: 2.2rem; /* Más grande */
+  color: var(--neon-green); /* Título de sección en verde neón */
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: var(--glow-intensity) var(--neon-green); /* Resplandor neón */
+}
+
+/* Styles for forms (Login, Register) */
+.auth-form-container {
+  max-width: 480px; /* Más ancho */
+  padding: 3rem; /* Más padding */
+  background-color: var(--darker-bg); /* Fondo aún más oscuro para el formulario */
+  border: 1px solid var(--neon-pink); /* Borde rosa neón */
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.3); /* Resplandor rosa alrededor del formulario */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem; /* Más espacio entre campos */
+}
+
+.form-group label {
+  font-size: 1.1rem; /* Más grande */
+  margin-bottom: 0.6rem;
+  color: var(--neon-blue); /* Etiquetas en azul neón */
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.2); /* Sutil resplandor */
+}
+
+.form-input {
+  padding: 0.9rem 1.2rem; /* Más padding */
+  border: 1px solid var(--neon-blue); /* Borde azul neón */
+  border-radius: 5px;
+  font-size: 1.05rem;
+  background-color: #2a2a40; /* Fondo más oscuro para los inputs */
+  color: var(--light-text); /* Texto claro en los inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: var(--neon-pink); /* Borde rosa neón al enfocar */
+  box-shadow: 0 0 0 4px rgba(255, 105, 180, 0.3); /* Resplandor al enfocar */
+  outline: none;
+}
+
+.btn.full-width {
+  width: 100%;
+}
+
+.error-message {
+  color: var(--neon-pink); /* Mensaje de error en rosa neón */
+  background-color: rgba(255, 105, 180, 0.1); /* Fondo sutil para el error */
+  border: 1px solid var(--neon-pink);
+  padding: 0.9rem 1.2rem;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 105, 180, 0.2);
+}
+
+.auth-link-text {
+  text-align: center;
+  margin-top: 2rem; /* Más margen */
+  font-size: 1rem;
+  color: var(--light-text);
+}
+
+.auth-link-text .page-link {
+  color: var(--neon-green); /* Enlaces de texto en verde neón */
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(57, 255, 20, 0.2);
+}
+
+.auth-link-text .page-link:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 8px var(--neon-green);
+}
+
+/* Course list for Dashboard */
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.course-list li {
+  background-color: #22223a; /* Fondo más oscuro para los ítems de lista */
+  border: 1px solid var(--neon-blue); /* Borde azul neón */
+  padding: 1.2rem 1.8rem;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: var(--light-text);
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.course-list li:hover {
+  transform: translateY(-5px); /* Efecto de elevación más pronunciado */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4); /* Resplandor azul neón al pasar el ratón */
+}

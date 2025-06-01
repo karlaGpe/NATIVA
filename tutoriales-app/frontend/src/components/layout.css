@@ -1,0 +1,230 @@
+/* tutoriales-app/frontend/src/components/layout.css */
+/* Este archivo contiene estilos globales que se aplican a toda la aplicación */
+
+/* Importar fuente de Google Fonts para el look neón/tecnológico */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    /* Paleta de Colores Neón */
+    --neon-blue: #00FFFF;       /* Cian eléctrico */
+    --neon-green: #00FF00;      /* Verde lima */
+    --neon-pink: #FF00FF;       /* Magenta/Fucsia */
+    --neon-purple: #8A2BE2;     /* Azul violeta neón */
+    --neon-yellow: #FFFF00;     /* Amarillo brillante */
+    --dark-bg: #1a1a2e;         /* Fondo muy oscuro, casi negro azulado */
+    --darker-bg: #0F0E1D;       /* Fondo aún más oscuro para contraste */
+    --text-color: #e0e0e0;      /* Color de texto claro para contraste */
+    --light-text-highlight: #FFFFFF; /* Blanco puro para destacar */
+}
+
+body {
+    font-family: 'Space Mono', monospace, Arial, sans-serif; /* Aplica la fuente */
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-bg); /* ¡FONDO OSCURO GLOBAL AQUÍ! */
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Evita scroll horizontal por sombras */
+    min-height: 100vh; /* Asegura que el body ocupe al menos toda la altura de la ventana */
+    display: flex;
+    flex-direction: column; /* Para que el footer se pegue abajo */
+}
+
+#root { /* Asegura que el contenedor raíz también sea oscuro */
+    background-color: var(--dark-bg);
+    flex-grow: 1; /* Para que el root ocupe el espacio restante y empuje el footer */
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Scrollbar con estilo neón (opcional, para navegadores que lo soportan) */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--darker-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--neon-blue);
+  border-radius: 20px;
+  border: 3px solid var(--darker-bg);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--neon-pink);
+}
+
+
+/* Estilos de Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: var(--darker-bg); /* Fondo más oscuro para la barra */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); /* Sombra neón azul */
+  position: sticky; /* O fixed si quieres que siempre esté visible */
+  top: 0;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2); /* Borde sutil neón */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--neon-blue); /* Color neón para el logo */
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--neon-blue); /* Brillo de texto */
+  letter-spacing: 0.5px;
+}
+
+.navbar-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.05em;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--neon-pink); /* Color neón al pasar el mouse */
+  text-shadow: 0 0 8px var(--neon-pink);
+}
+
+.navbar-actions .btn {
+  margin-left: 20px;
+}
+
+/* Estilos de botones */
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+  background-color: var(--neon-blue);
+  color: var(--dark-bg);
+  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue);
+}
+
+.btn.primary:hover {
+  background-color: var(--neon-pink);
+  box-shadow: 0 0 15px var(--neon-pink), 0 0 30px var(--neon-pink);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green);
+}
+
+.btn.secondary:hover {
+  background-color: var(--neon-green);
+  color: var(--dark-bg);
+  box-shadow: 0 0 15px var(--neon-green);
+}
+
+/* Otros estilos generales para títulos y enlaces */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--neon-blue);
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+}
+
+p {
+    color: var(--text-color);
+}
+
+a {
+    color: var(--neon-green);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+}
+
+/* Estilos para el Footer */
+.footer {
+  background-color: var(--darker-bg); /* Fondo oscuro para el footer */
+  color: var(--text-color);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: auto; /* Empuja el footer al final de la página */
+  border-top: 1px solid rgba(0, 255, 255, 0.2); /* Borde superior neón */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: var(--medium-grey);
+}
+
+/* Ajustes responsivos básicos para el layout */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .navbar-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar-links a {
+    margin: 5px 10px;
+  }
+  .navbar-actions {
+    margin-top: 15px;
+  }
+  .navbar-actions .btn {
+    margin: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.2em;
+  }
+  .navbar-links a {
+    font-size: 0.9em;
+    margin: 5px;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
